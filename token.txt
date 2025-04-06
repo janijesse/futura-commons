@@ -1,0 +1,52 @@
+ Connected to XRPL Devnet
+
+💧 Creating accounts...
+🔑 Issuer: raHLN8U8hhQxUQSk7wR4adyekkcuGaEE7E
+👛 LP Provider: rGaEn6oimJGTHFCiGwZW2zsLmuvqo29Ga2
+
+⚙️ Configuring issuer account...
+🔄 Enabling Default Ripple...
+✅ Configuration completed
+
+🤝 Creating TrustLine...
+✅ TrustLine established
+
+💸 Sending RETREAT tokens...
+✅ Tokens sent
+
+🌀 Creating liquidity pool...
+💰 LP XRP Balance: 99.999999
+📦 Submitting AMM transaction...
+✅ Pool created: C853CFF367966271D5ABD27E79698B5E07A190E9BE84AB9488E65C1179C2C368
+
+🔍 Checking pool status...
+📊 Pool details: {
+  amm: {
+    account: 'rhygnrMcmHDRpby6NenmC9ZTCNC7rDFDde',
+    amount: {
+      currency: '5245545245415400000000000000000000000000',
+      issuer: 'raHLN8U8hhQxUQSk7wR4adyekkcuGaEE7E',
+      value: '20'
+    },
+    amount2: '20000000',
+    asset_frozen: false,
+    auction_slot: {
+      account: 'rGaEn6oimJGTHFCiGwZW2zsLmuvqo29Ga2',
+      discounted_fee: 10,
+      expiration: '2025-04-07T10:35:42+0000',
+      price: [Object],
+      time_interval: 0
+    },
+    lp_token: {
+      currency: '03693938243D3D41BD513C671F52F9D3BC3410B6',
+      issuer: 'rhygnrMcmHDRpby6NenmC9ZTCNC7rDFDde',
+      value: '20000'
+    },
+    trading_fee: 100,
+    vote_slots: [ [Object] ]
+  },
+  ledger_current_index: 1712908,
+  validated: false
+}
+
+🔌 Disconnected from XRPL Devnet
