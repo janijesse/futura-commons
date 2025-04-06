@@ -1,91 +1,100 @@
-### Futura Commons
+# 🧠 Futura Commons – Onchain Retirement Fund
 
-A decentralized retirement platform built on the XRPL blockchain, providing a transparent and regenerative approach to pension funds.
-
-## Overview
-
-Futura Commons is a decentralized application (dApp) that allows users to create and manage their retirement funds on the XRPL blockchain. The platform converts user deposits into the project's native token, which is then allocated to yield-generating pools to grow users' pensions over time. AI Agents handle the NFT minting and authorization verification processes.
-
-## Key Features
-
-- **Risk Assessment**: Personalized risk profiling based on age, country, income, and investment experience
-- **Pension Simulator**: Interactive tool to estimate future pension value based on contributions and yield rates
-- **Wallet Integration**: Seamless connection with XRPL wallets for secure transactions
-- **Token Conversion**: Automatic conversion of deposited XRP to Futura Commons tokens
-- **AI-Powered NFT Authorization**: AI Agents mint access NFTs and verify wallet authorization
-- **Impact Tracking**: Monitor both financial growth and positive environmental impact of investments
-- **Responsive Design**: Fully optimized for both desktop and mobile devices
-
-
-## Technical Stack
-
-- **Frontend**: Next.js 
-- **UI Components**: shadcn/ui component library
-- **Blockchain**: XRPL (XRP Ledger)
-- **Authentication**: NFT-based access control managed by AI Agents
-- **State Management**: Local storage (MVP version)
-
-
-## How It Works
-
-1. **Assessment**: Users complete a risk assessment form to determine their investment profile
-2. **Pension Planning**: Users simulate their pension growth using the interactive yield calculator
-3. **Contribution**: Users connect their XRPL wallet and make their initial contribution
-4. **Token Conversion**: Deposited XRP is converted to Futura Commons tokens
-5. **AI-Powered NFT Minting**: An AI Agent mints a unique NFT to the user's wallet, serving as their access key
-6. **Yield Generation**: Tokens are allocated to yield-generating pools based on the user's risk profile
-7. **Vault Access**: When accessing the pension vault, an AI Agent verifies the wallet has the required authorization NFT
-8. **Dashboard Access**: Users can track their pension growth and impact metrics after verification
-
-
-## AI Agent Authorization System
-
-Futura Commons implements a secure access control system using AI Agents:
-
-- **NFT Minting Agent**: Automatically mints unique authorization NFTs to user wallets upon initial contribution
-- **Verification Agent**: Checks for the presence of the authorization NFT when users attempt to access their pension vault
-- **Security Monitoring**: Continuously monitors for unauthorized access attempts
-- **Revocation Handling**: Manages NFT revocation in case of security concerns
-
-
-## User Flow
-
-1. **Landing Page**: Introduction to the platform and its benefits
-2. **Assessment**: Complete personal information and risk tolerance questionnaire
-3. **Pension Simulator**: Adjust contribution amounts and view projected pension values
-4. **Contribution**: Connect wallet and make initial contribution
-5. **NFT Minting**: AI Agent mints authorization NFT to the user's wallet
-6. **Success**: Receive confirmation of contribution and NFT minting
-7. **Dashboard**: Access personalized dashboard after AI Agent verifies NFT authorization
-
-
-## Regenerative Finance
-
-Futura Commons implements regenerative finance principles by:
-
-- Allocating funds to sustainable projects that generate both financial returns and positive impact
-- Tracking carbon offset and renewable energy metrics for each investment
-- Supporting projects like solar microgrids and sustainable agriculture
-
-
-## Security Features
-
-- Self-custodial solution where users maintain control of their assets
-- AI-powered NFT-based access control for dashboard and pension management
-- Transparent allocation of funds visible on the XRPL blockchain
-- Secure verification process for all vault access attempts
-
-
-## Future Development
-
-- Multi-currency support
-- Enhanced AI verification capabilities
-- Mobile application
-- Governance mechanisms for community-driven decision making
-- Integration with additional yield-generating protocols
-- Advanced NFT features for tiered access and benefits
-
+Category: DeFi / Regenerative Finance / Tokenized Savings  
+Hackathon Track: XRPL Commons
 
 ---
 
-*Note: This MVP demonstrates the core functionality of the Futura Commons platform. In a production environment, additional security measures and smart contract audits would be implemented.*
+## 🚀 The Big Idea
+
+Futura Commons is a decentralized financial system that reimagines retirement and long-term savings through a regenerative lens. Instead of locking funds into opaque institutions, users contribute value into transparent, verifiable, and composable on-chain liquidity pools that fuel regenerative economies.
+
+We leverage XRPL’s upcoming Automated Market Maker (AMM) technology to create a next-gen community savings vehicle — backed by a token called RETREAT, and powered by on-chain liquidity dynamics.
+
+---
+
+## 💼 Business Model
+
+### 💡 The Problem
+
+Traditional pension systems are:
+
+- ❌ Centralized, outdated, and misaligned with individual values  
+- ❌ Exclude freelancers, gig workers, or people in the Global South — especially those paid in tokens  
+- ❌ Not transparent, difficult to access, and provide no regenerative or social impact  
+
+---
+
+## 🌱 RETREAT's Solution
+
+- 🌐 Users mint or receive RETREAT tokens — their “pension points”
+- 💧 These tokens are pooled into XRPL AMMs with real liquidity (XRP)
+- 🌍 Liquidity can support green projects, regenerative NFTs, or tokenized real-world assets *(MVP uses XRP only)*
+- 📈 Participants earn passive yield + social impact reputation
+- 🔁 Value is recoverable, tradable, or re-deployable — retirement with flexibility + meaning
+
+---
+
+## ⚙️ Technical Breakdown
+
+| Component           | Description                                                                 |
+|------------------------|---------------------------------------------------------------------------------|
+| XRPL Devnet / AMM Devnet | Base protocol to issue tokens, create trustlines, and launch AMM               |
+| RETREAT Token          | ASCII-based custom token (20-character HEX padded) representing long-term savings |
+| Two Wallets (Issuer & LP) | Simulates user and protocol behavior: Issuer distributes RETREAT, LP provides liquidity |
+| TrustSet + Payment TXs | Establish token trustline and handle transfers securely                         |
+| AMMCreate TX           | Creates a liquidity pool with 20 RETREAT + 40 XRP                             |
+| Custom AMM Monitor     | Validates pool creation and monitors status using XRPL APIs                     |
+
+> 🪙 RETREAT is issued in standardized XRPL format — lightweight, fee-efficient, and compatible with wallets and aggregators.
+
+---
+
+## 🌍 Impact Potential
+
+- 👩‍💻 Freelancers & DAOs can self-organize retirement plans, backed by communities  
+- 🌱 Regenerative projects can plug in as yield sources  
+- 🏘 NGOs & local communities gain programmable, transparent saving mechanisms
+
+---
+
+## 🧪 Hackathon Deliverables
+
+- ✅ Fully working JavaScript/Node.js script  
+- ✅ RETREAT Token issued and pooled via XRPL AMM  
+- ✅ Dynamic autofill() logic, robust validation, and AMM status monitoring  
+- 🔜 Web interface to simulate real contributions  
+- 🔜 Farcaster Frames integration for community voting on pool allocations
+
+---
+
+## 🛠 Stack Used
+
+- [xrpl.js](https://github.com/XRPLF/xrpl.js) — Full control over transaction lifecycle and signing  
+- XRPL Devnet — For all token logic and AMM simulation  
+- Node.js / CLI-first — Transparent, traceable development workflow
+
+---
+
+## 🔄 What Happens Next
+
+Once AMMs go live on XRPL Mainnet:
+
+- ✅ Enable real contributions to RETREAT pools  
+- 🌉 Connect to RWA bridges or climate-positive protocols (e.g., CELO)
+
+---
+
+## 🙌 Why It Matters
+
+We're bridging financial self-sovereignty with planet-positive savings.
+
+RETREAT isn’t just another DeFi experiment — it’s a modular, regenerative retirement layer on XRPL that enables people to:
+
+- Save meaningfully  
+- Grow wealth securely  
+- Fund the future they want to retire into
+
+---
+
+> Built for people, planet, and permanence. 🌍
